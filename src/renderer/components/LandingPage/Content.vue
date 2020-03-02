@@ -34,6 +34,15 @@ export default {
     return {
       current: 1
     }
+  },
+  methods: {
+    // 实现点击复制textarea区域文本内容
+    copy() {
+      let block = document.getElementById('block');
+      block.select();
+      document.execCommand('copy');
+      this.$message.success('复制成功！')
+    },
   }
 }
 </script>
